@@ -44,3 +44,7 @@ colorscheme molokai
 
 " Leader is now , 
 :let mapleader = ","
+
+
+" map NerdTree toggle command to leader+space
+nnoremap <leader><space> :NERDTreeToggle<CR>

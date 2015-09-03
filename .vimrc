@@ -16,6 +16,7 @@ Plugin 'Lokaltog/vim-easymotion'
 Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tomasr/molokai'
+Plugin 'jpo/vim-railscasts-theme'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -40,11 +41,15 @@ set shiftwidth=4
 set expandtab
 
 " Colorscheme
-colorscheme molokai 
+autocmd BufEnter * colorscheme molokai
+autocmd BufEnter *.rb colorscheme railscasts
+autocmd BufEnter *.erb colorscheme railscasts
 
 " Leader is now , 
 :let mapleader = ","
 
-
-" map NerdTree toggle command to leader+space
+" Map NerdTree toggle command to leader+space
 nnoremap <leader><space> :NERDTreeToggle<CR>
+
+" Enable line numbers
+set number
